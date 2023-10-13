@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="PZ6.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PZ6"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBlock Text="Главная страница" Style="{ThemeResource HeaderTextBlockStyle}" />
+        <Button Content="На первую" Click="Forward_Click" />
+        <Button Content="На вторую" Click="Forwardtwo_Click" />
+        <Button Content="На третью" Click="Forwardtree_Click" />
+    </StackPanel>
+</Page>

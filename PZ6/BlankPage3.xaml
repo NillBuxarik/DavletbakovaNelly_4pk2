@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="PZ6.BlankPage3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PZ6"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Goldenrod">
+
+    <StackPanel>
+        <TextBlock Text="Страница 3" Foreground="Black" HorizontalAlignment="Center" FontSize="36" />
+        <TextBlock x:Name="textBlock1" FontSize="24" Foreground="Black" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+        <Button FontSize="30" Foreground="Black" HorizontalAlignment="Center" Background="AliceBlue" Margin="15" Click="Forward_Clickmain">На главную</Button>
+        <Button FontSize="30" Foreground="Black" HorizontalAlignment="Center" Background="AliceBlue" Margin="15" Click="Forward_Click">На первую</Button>
+        <Button FontSize="30" Foreground="Black" HorizontalAlignment="Center" Background="AliceBlue" Margin="15" Click="Forwardtwo_Click">На вторую</Button>
+    </StackPanel>
+</Page>

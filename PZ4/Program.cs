@@ -8,7 +8,7 @@ public class Database
         //блокирует Savedata для других потоков, если Savedata уже используется другим потоком
         //lock (this)
         //{
-        Console.WriteLine("Database.SaveData - начатый");
+            Console.WriteLine("Database.SaveData - начатый");
             Console.WriteLine("Database.SaveData - работающий");
             Console.WriteLine(text);
             Console.WriteLine("Database.SaveData - законченный");
