@@ -19,7 +19,6 @@ int main() {
         return GetLastError();
     }
 
-   
     printf("Reserved regions:\n");
     printRegionAddress(lpRegion1, 2 * dwPageSize);
     printRegionAddress(lpRegion2, 2 * dwPageSize);
