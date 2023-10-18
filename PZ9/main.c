@@ -48,7 +48,6 @@ int main() {
     int fillValue = number;
     FillMemory(lpRegion2, 2 * dwPageSize, fillValue);
 
-    
     printf("\nContents of the regions:\n");
     for (char* ptr = (char*)lpRegion1; ptr < (char*)lpRegion1 + 2 * dwPageSize; ptr++) {
         printf("%02X ", *ptr);
