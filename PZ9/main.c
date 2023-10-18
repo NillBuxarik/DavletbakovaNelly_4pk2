@@ -10,7 +10,7 @@ int main() {
     GetSystemInfo(&sysInfo);
     SIZE_T dwPageSize = sysInfo.dwPageSize;
 
-    // Reserve two regions of memory, each with a size of 2 pages
+    
     LPVOID lpRegion1 = VirtualAlloc(NULL, 2 * dwPageSize, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
     LPVOID lpRegion2 = VirtualAlloc(NULL, 2 * dwPageSize, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
 
@@ -19,15 +19,15 @@ int main() {
         return GetLastError();
     }
 
-    // Print addresses of the reserved regions
+   
     printf("Reserved regions:\n");
     printRegionAddress(lpRegion1, 2 * dwPageSize);
     printRegionAddress(lpRegion2, 2 * dwPageSize);
 
-    // Clear data in the first memory region
+   
     ZeroMemory(lpRegion1, 2 * dwPageSize);
 
-    // Read an integer in the range of 0..127
+   
     int number;
     printf("Enter an integer between 0 and 127: ");
     if (scanf_s("%d", &number) != 1) {
@@ -44,11 +44,11 @@ int main() {
         return -1;
     }
 
-    // Fill both regions with the entered number
+    
     int fillValue = number;
     FillMemory(lpRegion2, 2 * dwPageSize, fillValue);
 
-    // Display the contents of the regions
+    
     printf("\nContents of the regions:\n");
     for (char* ptr = (char*)lpRegion1; ptr < (char*)lpRegion1 + 2 * dwPageSize; ptr++) {
         printf("%02X ", *ptr);
@@ -59,7 +59,7 @@ int main() {
     }
     printf("\n");
 
-    // Free the allocated memory
+    
     VirtualFree(lpRegion1, 0, MEM_RELEASE);
     VirtualFree(lpRegion2, 0, MEM_RELEASE);
 
