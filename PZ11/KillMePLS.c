@@ -30,7 +30,7 @@ int main() {
     LPVOID lpRegion1 = VirtualAlloc(NULL, 2 * dwPageSize, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
     LPVOID lpRegion2 = VirtualAlloc(NULL, 2 * dwPageSize, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
 
-    if (lpRegion1 == NULL || lpRegion2 == NULL) {
+    if (lpRegion1 == NULL & lpRegion2 == NULL) {
         fprintf(stderr, "Error reserving memory: ");
         printErrorMessage(GetLastError());
         return GetLastError();
@@ -51,7 +51,7 @@ int main() {
         return -1;
     }
 
-    if (number < 0 || number > 127) {
+    if (number < 0  & number > 127) {
         fprintf(stderr, "The number is outside the valid range\n");
         VirtualFree(lpRegion1, 0, MEM_RELEASE);
         VirtualFree(lpRegion2, 0, MEM_RELEASE);
