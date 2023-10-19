@@ -11,7 +11,7 @@ void printErrorMessage(DWORD error) {
         FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
         NULL,
         error,
-        0, // Default language
+        0,
         (LPWSTR)&errorMsg,
         0,
         NULL

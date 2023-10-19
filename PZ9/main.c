@@ -23,10 +23,9 @@ int main() {
     printRegionAddress(lpRegion1, 2 * dwPageSize);
     printRegionAddress(lpRegion2, 2 * dwPageSize);
 
-    // Clear data in the first memory region
+
     ZeroMemory(lpRegion1, 2 * dwPageSize);
 
-    // Read an integer in the range of 0..127
     int number;
     printf("Enter an integer between 0 and 127: ");
     if (scanf_s("%d", &number) != 1) {
@@ -43,7 +42,6 @@ int main() {
         return -1;
     }
 
-    // Fill both regions with the entered number
     int fillValue = number;
     FillMemory(lpRegion2, 2 * dwPageSize, fillValue);
 
@@ -57,7 +55,7 @@ int main() {
     }
     printf("\n");
 
-    // Free the allocated memory
+  
     VirtualFree(lpRegion1, 0, MEM_RELEASE);
     VirtualFree(lpRegion2, 0, MEM_RELEASE);
 
