@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include "MathLibrary.h"
-
 int main()
 {
     fibonacci_init(1, 1);
